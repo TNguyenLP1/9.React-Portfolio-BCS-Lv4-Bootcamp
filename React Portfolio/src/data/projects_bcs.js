@@ -1,5 +1,4 @@
-// projects_bcs.js
-export const projects_bcs = [
+const projects_bcs = [
   {
     id: 1,
     title: "Multi-page Responsive Website",
@@ -82,3 +81,5 @@ export const projects_bcs = [
     link: "#" // under development
   }
 ];
+
+export default projects_bcs;

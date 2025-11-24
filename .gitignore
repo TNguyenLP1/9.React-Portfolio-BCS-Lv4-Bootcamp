@@ -13,3 +13,6 @@ __pycache__/
 # Machine specific extension files - also not needed
 
 # Ensure git untracked file and not uploaded to github
+
+node_modules/
+# Ignores node modules folder which contains all npm packages

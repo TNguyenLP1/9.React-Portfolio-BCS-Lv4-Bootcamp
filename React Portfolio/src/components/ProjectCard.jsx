@@ -1,6 +1,4 @@
 import React from "react";
-
-// ===== IMPORT ALL ICONS USED IN PROJECT DATA =====
 import {
   FaHtml5,
   FaCss3Alt,
@@ -8,75 +6,76 @@ import {
   FaPython,
   FaNodeJs,
   FaReact,
-  FaJava
+  FaDatabase,
+  FaJava,
+  FaGit
 } from "react-icons/fa";
-
 import {
-  SiExpress,
-  SiMongodb,
-  SiSequelize,
   SiTensorflow,
   SiKeras,
+  SiScikitlearn,
   SiPandas,
   SiNumpy,
-  SiScikitlearn,
-  SiR,
-  SiRstudio,
-  SiTidyverse,
-  SiGgplot2,
-  SiMysql
+  SiMysql,
+  SiMongodb,
+  SiSequelize,
+  SiTailwindcss,
+  SiDocker,
+  SiR
 } from "react-icons/si";
 
-// ===== MAP TECH STRINGS TO ICON COMPONENTS =====
 const iconMap = {
-  FaHtml5: <FaHtml5 />,
-  FaCss3Alt: <FaCss3Alt />,
-  FaJs: <FaJs />,
-  FaPython: <FaPython />,
-  FaNodeJs: <FaNodeJs />,
-  FaReact: <FaReact />,
-  FaJava: <FaJava />,
-  SiExpress: <SiExpress />,
-  SiMongodb: <SiMongodb />,
-  SiSequelize: <SiSequelize />,
-  SiTensorflow: <SiTensorflow />,
-  SiKeras: <SiKeras />,
-  SiPandas: <SiPandas />,
-  SiNumpy: <SiNumpy />,
-  SiScikitlearn: <SiScikitlearn />,
-  SiR: <SiR />,
-  SiRstudio: <SiRstudio />,
-  SiTidyverse: <SiTidyverse />,
-  SiGgplot2: <SiGgplot2 />,
-  SiMysql: <SiMysql />
+  HTML5: <FaHtml5 />,
+  CSS3: <FaCss3Alt />,
+  JavaScript: <FaJs />,
+  Python: <FaPython />,
+  "Node.js": <FaNodeJs />,
+  React: <FaReact />,
+  SQL: <FaDatabase />,
+  MySQL: <SiMysql />,
+  MongoDB: <SiMongodb />,
+  Sequelize: <SiSequelize />,
+  TensorFlow: <SiTensorflow />,
+  Keras: <SiKeras />,
+  scikit: <SiScikitlearn />,
+  Pandas: <SiPandas />,
+  Numpy: <SiNumpy />,
+  Tailwind: <SiTailwindcss />,
+  Docker: <SiDocker />,
+  R: <SiR />,
+  Git: <FaGit />
 };
 
-export default function ProjectCard({ title, tech, img, link, description }) {
+export default function ProjectCard({ title, tech = [], img, link, description, logo }) {
+  // Use a safe image fallback if provided img path doesn't resolve
+  const imageSrc = img || "/vite.svg";
+
   return (
-    <div className="project-card">
-      <img src={img} alt={title} className="project-image" />
+    <div className="project-card" role="article" aria-label={title}>
+      <img src={imageSrc} alt={title} className="project-image" />
 
       <h3 className="project-title">{title}</h3>
 
       <p className="project-description">{description}</p>
 
-      {/* TECH ICON SECTION */}
-      <div className="project-tech">
-        {tech.map((iconKey, i) => (
-          <span key={i} className="tech-icon">
-            {iconMap[iconKey] || iconKey}
+      <div className="project-tech" aria-hidden>
+        {tech.map((t, i) => (
+          <span key={i} className="tech-icon" title={t}>
+            {iconMap[t] || t}
           </span>
         ))}
       </div>
 
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-link"
-      >
-        View Project
-      </a>
+      <div className="links" style={{ marginTop: "0.5rem" }}>
+        <a
+          className="btn btn-primary"
+          href={link || "#"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project
+        </a>
+      </div>
     </div>
   );
 }

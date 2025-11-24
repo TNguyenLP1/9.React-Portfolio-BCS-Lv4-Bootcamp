@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Home() {
   // Use public fallback image so missing local asset won't crash app
-  const profileSrc = "/vite.svg";
+  const profileSrc = "/src/assets/logos/profile.jpg";
 
   return (
     <section className="home container">

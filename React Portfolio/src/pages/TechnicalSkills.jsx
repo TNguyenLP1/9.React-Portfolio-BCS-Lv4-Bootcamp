@@ -1,31 +1,39 @@
-import React from "react";
+// src/pages/TechnicalSkills.jsx
 import ProjectGallery from "../components/ProjectGallery";
-import SkillSection from "../components/SkillSection";
 
-// use public fallbacks for logos to avoid missing file crashes
-const bcsLogo = "/vite.svg";
-const utaLogo = "/vite.svg";
-const monashLogo = "/vite.svg";
+import bcsProjects from "../data/projects_bcs";
+import utProjects from "../data/projects_ut";
+import monashProjects from "../data/projects_monash";
 
-// import default exports
-import bcsData from "../data/projects_bcs";
-import utData from "../data/projects_ut";
-import monashData from "../data/projects_monash";
+import bcsLogo from "../assets/logos/bcs.png";
+import utLogo from "../assets/logos/uta.png";
+import monashLogo from "../assets/logos/monash.png";
 
 export default function TechnicalSkills() {
   return (
-    <div className="technical-skills container">
-      <SkillSection logo={bcsLogo} title="BCS Level 4 (Main)">
-        <ProjectGallery items={bcsData} />
-      </SkillSection>
+    <div className="page technical-skills">
 
-      <SkillSection logo={utaLogo} title="UT Austin — AI & ML">
-        <ProjectGallery items={utData} />
-      </SkillSection>
+      {/* BCS */}
+      <section>
+        <img src={bcsLogo} alt="BCS Logo" className="provider-logo" />
+        <h2>BCS Level 4 Projects</h2>
+        <ProjectGallery items={bcsProjects} />
+      </section>
 
-      <SkillSection logo={monashLogo} title="Monash University — Data Science">
-        <ProjectGallery items={monashData} />
-      </SkillSection>
+      {/* UT Austin */}
+      <section>
+        <img src={utLogo} alt="UT Austin Logo" className="provider-logo" />
+        <h2>UT Austin AI/ML Projects</h2>
+        <ProjectGallery items={utProjects} />
+      </section>
+
+      {/* Monash University */}
+      <section>
+        <img src={monashLogo} alt="Monash University Logo" className="provider-logo" />
+        <h2>Monash University Data Science Projects</h2>
+        <ProjectGallery items={monashProjects} />
+      </section>
+
     </div>
   );
 }

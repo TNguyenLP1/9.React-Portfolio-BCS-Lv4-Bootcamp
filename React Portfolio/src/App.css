@@ -488,3 +488,64 @@ button:focus,
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+.provider-logo {
+  height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.project-tech {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* ============================= */
+/* SKILL SECTION */
+/* ============================= */
+
+/* SKILL HEADER */
+.skill-header {
+  display: flex;             /* horizontal layout */
+  align-items: center;       /* vertically center logo and text */
+  gap: 1rem;                 /* space between logo and text */
+  margin-bottom: 1rem;
+}
+
+.provider-logo {
+  height: 80px;              /* larger logo */
+  width: auto;
+  flex-shrink: 0;            /* prevents logo from shrinking */
+  display: inline-block;
+}
+
+.provider-title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;          /* text wraps naturally next to logo */
+  display: inline-block;     /* ensures it stays on the same line */
+}
+
+
+/* Responsive: stack logo above text on small screens */
+@media (max-width: 720px) {
+  .skill-header {
+    flex-direction: column;  /* stack logo above text */
+    align-items: flex-start; /* left-align everything */
+    gap: 0.5rem;
+  }
+
+  .provider-logo {
+    height: 48px;            /* smaller for mobile */
+  }
+}

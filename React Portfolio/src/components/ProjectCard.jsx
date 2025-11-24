@@ -46,19 +46,18 @@ const iconMap = {
   Git: <FaGit />
 };
 
-export default function ProjectCard({ title, tech = [], img, link, description, logo }) {
-  // Use a safe image fallback if provided img path doesn't resolve
-  const imageSrc = img || "/vite.svg";
-
+export default function ProjectCard({ title, tech = [], link, description }) {
   return (
     <div className="project-card" role="article" aria-label={title}>
-      <img src={imageSrc} alt={title} className="project-image" />
-
+      
+      {/* Title */}
       <h3 className="project-title">{title}</h3>
 
+      {/* Description */}
       <p className="project-description">{description}</p>
 
-      <div className="project-tech" aria-hidden>
+      {/* Tech Icons */}
+      <div className="project-tech">
         {tech.map((t, i) => (
           <span key={i} className="tech-icon" title={t}>
             {iconMap[t] || t}
@@ -66,7 +65,8 @@ export default function ProjectCard({ title, tech = [], img, link, description, 
         ))}
       </div>
 
-      <div className="links" style={{ marginTop: "0.5rem" }}>
+      {/* Link */}
+      <div className="links">
         <a
           className="btn btn-primary"
           href={link || "#"}

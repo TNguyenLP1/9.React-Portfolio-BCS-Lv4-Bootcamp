@@ -62,6 +62,50 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   backdrop-filter: blur(4px);
   transition: background-color var(--transition), color var(--transition);
 }
+
+.nav-left h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* Desktop/tablet nav */
+.nav-desktop {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Mobile toggle hidden by default */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Mobile dropdown hidden by default */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  z-index: 99; /* below header but above page */
+}
+
+/* Open state */
+.nav-menu.open {
+  display: flex;
+}
+
 .header .nav-left { font-weight: 700; letter-spacing: 0.2px; }
 
 .nav {
@@ -579,4 +623,129 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 /* Accent headings obey theme accent (blue in light, purple in dark) */
 .accent-heading {
   color: var(--accent);
+}
+/* Tablet adjustments */
+@media (max-width: 920px) {
+  /* Awards row: allow wrapping if space is tight */
+  .awards {
+    flex-wrap: wrap;
+    --awards-width: calc(140px * 3 + 1rem * 2); /* keep same bounding width */
+  }
+
+  /* Skill marquee: restricted to awards width */
+  .skill-marquee {
+    max-width: var(--awards-width, 460px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Profile picture: shrink slightly */
+  .profile-pic-large {
+    max-width: 200px;
+  }
+
+  /* Timeline spacing */
+  .timeline2 {
+    padding-left: 1.25rem;
+  }
+  .timeline2::before {
+    left: 0.5rem;
+  }
+}
+
+/* Mobile breakpoint ONLY shows dropdown/hamburger */
+@media (max-width: 720px) {
+  /* Center name in header on mobile */
+  .header {
+    justify-content: center;
+  }
+
+  .nav-left {
+    text-align: center;
+    flex: 1;
+  }
+
+  /* Hide desktop nav on mobile */
+  .nav-desktop {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+  }
+
+  /* Ensure dropdown overlays content */
+  .nav-menu {
+    display: none;
+    z-index: 200;
+  }
+
+  /* Collapse grid into one column */
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto; /* stack rows */
+    gap: 1.25rem;
+  }
+
+  /* Move right column (profile + awards + skills) above summary */
+  .grid-right {
+    grid-column: 1;
+    grid-row: 1; /* top */
+    align-items: center;
+  }
+
+  /* Move left column (summary/timeline) underneath */
+  .grid-left {
+    grid-column: 1;
+    grid-row: 2; /* bottom */
+  }
+
+  /* Profile pic sizing for mobile */
+  .profile-pic-large {
+    max-width: 160px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* Awards row: allow wrapping neatly */
+  .awards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Skill marquee: restricted to awards width */
+  .skill-marquee {
+    max-width: var(--awards-width, 460px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Timeline spacing tweaks for mobile */
+  .timeline2 {
+    padding-left: 1rem;
+  }
+  .timeline2::before {
+    left: 0.5rem;
+  }
+}
+
+/* Dropdown animation */
+.nav-menu {
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+.nav-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav-link.active.bold {
+  font-weight: 700; /* bold */
 }

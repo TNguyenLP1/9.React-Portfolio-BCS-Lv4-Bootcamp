@@ -3,8 +3,8 @@ const projects_bcs = [
     id: 1,
     title: "Multi-page Responsive Website",
     logo: "bcs-logo.png",
-    tech: ["HTML5", "CSS3", "Flexbox", "Grid", "Semantic HTML"],
-    techIcons: ["html5.png", "css3.png", "flexbox.png", "grid.png", "semantic.png"],
+    tech: ["HTML5", "CSS3", "Semantic HTML", "Flexbox", "Grid"],
+    techIcons: ["html5.png", "css3.png", "semantic.png", "flexbox.png", "grid.png"],
     description: "Responsive multi-page layout with semantic HTML, Flexbox/Grid, and a functional contact form.",
     link: "https://tnguyenlp1.github.io/2.-Multi-page-Responsive-Website---BCS-Level-4-Bootcamp"
   },
@@ -21,8 +21,8 @@ const projects_bcs = [
     id: 3,
     title: "Interactive To-Do List",
     logo: "bcs-logo.png",
-    tech: ["JavaScript", "DOM Manipulation", "LocalStorage", "Event Handling"],
-    techIcons: ["javascript.png", "dom.png", "localstorage.png", "events.png"],
+    tech: ["JavaScript", "DOM Manipulation", "Event Handling", "LocalStorage"],
+    techIcons: ["javascript.png", "dom.png", "events.png", "localstorage.png"],
     description: "Dynamic task management app with add, delete, validate, and edit functionality.",
     link: "https://tnguyenlp1.github.io/4.-The-Interactive-To-Do-List-BCS-Lv4-Bootcamp/"
   },
@@ -30,8 +30,8 @@ const projects_bcs = [
     id: 4,
     title: "Collaboration Music App",
     logo: "bcs-logo.png",
-    tech: ["HTML5", "CSS3", "JavaScript", "API Integration", "Responsive Design"],
-    techIcons: ["html5.png", "css3.png", "javascript.png", "api.png", "responsive.png"],
+    tech: ["JavaScript", "HTML5", "CSS3", "API Integration", "Responsive Design"],
+    techIcons: ["javascript.png", "html5.png", "css3.png", "api.png", "responsive.png"],
     description: "Search and explore artists/albums using Last.fm API; dynamic UI with modular architecture.",
     link: "https://tnguyenlp1.github.io/5.-Collaboration-Group-Project-Music-App-BCS-Lv4-Bootcamp/"
   },
@@ -66,8 +66,8 @@ const projects_bcs = [
     id: 8,
     title: "React Portfolio",
     logo: "react-logo.png",
-    tech: ["React", "React Router", "Tailwind CSS", "Vite", "Responsive UI"],
-    techIcons: ["react.png", "router.png", "tailwind.png", "vite.png", "responsive.png"],
+    tech: ["React", "Tailwind CSS", "Vite", "React Router", "Django", "Responsive UI"],
+    techIcons: ["react.png", "tailwind.png", "vite.png", "router.png", "responsive.png"],
     description: "Fully responsive portfolio built in React; displays 8 projects with interactive components.",
     link: "#" // will be updated when deployed
   },
@@ -75,8 +75,8 @@ const projects_bcs = [
     id: 9,
     title: "Group Full-Stack Project",
     logo: "node-logo.png",
-    tech: ["Node.js", "Express.js", "Sequelize ORM", "JWT Auth", "Tailwind CSS", "Interactive UI"],
-    techIcons: ["node.png", "express.png", "sequelize.png", "jwt.png", "tailwind.png", "interactive.png"],
+    tech: ["React", "Node.js", "Express.js", "Sequelize ORM", "PostgreSQL", "Django", "Tailwind CSS", "Vite", "JWT Auth", "Interactive UI"],
+    techIcons: ["node.png", "express.png", "sequelize.png", "postgresql.png", "django.png", "tailwind.png", "vite.png", "jwt.png", "interactive.png"],
     description: "Team project with RESTful API, authentication, unique technology integration, and responsive interface.",
     link: "#" // under development
   }

@@ -21,7 +21,13 @@ import {
   SiSequelize,
   SiTailwindcss,
   SiDocker,
-  SiR
+  SiR,
+  SiDjango,
+  SiPostgresql,
+  SiBootstrap,
+  SiVite,
+  SiTidyverse,
+  SiGooglecolab,
 } from "react-icons/si";
 
 const iconMap = {
@@ -43,21 +49,24 @@ const iconMap = {
   Tailwind: <SiTailwindcss />,
   Docker: <SiDocker />,
   R: <SiR />,
-  Git: <FaGit />
+  Git: <FaGit />,
+  Django: <SiDjango />,
+  PostgreSQL: <SiPostgresql />,
+  Bootstrap: <SiBootstrap />,
+  Vite: <SiVite />,
+  Tidyverse: <SiTidyverse />,
+  "Google Colab": <SiGooglecolab />,
 };
+
 
 export default function ProjectCard({ title, tech = [], link, description }) {
   return (
-    <div className="project-card" role="article" aria-label={title}>
-      
-      {/* Title */}
+    <article className="project-card" aria-label={title}>
       <h3 className="project-title">{title}</h3>
 
-      {/* Description */}
       <p className="project-description">{description}</p>
 
-      {/* Tech Icons */}
-      <div className="project-tech">
+      <div className="project-tech" aria-hidden>
         {tech.map((t, i) => (
           <span key={i} className="tech-icon" title={t}>
             {iconMap[t] || t}
@@ -65,17 +74,11 @@ export default function ProjectCard({ title, tech = [], link, description }) {
         ))}
       </div>
 
-      {/* Link */}
       <div className="links">
-        <a
-          className="btn btn-primary"
-          href={link || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className="btn btn-primary" href={link || "#"} target="_blank" rel="noopener noreferrer">
           View Project
         </a>
       </div>
-    </div>
+    </article>
   );
 }

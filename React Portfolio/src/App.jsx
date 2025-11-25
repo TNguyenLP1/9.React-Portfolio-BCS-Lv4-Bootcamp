@@ -1,6 +1,5 @@
-// src/App.jsx
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -20,12 +19,14 @@ export default function App() {
       <BrowserRouter>
         <Header theme={theme} setTheme={setTheme} />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/technical-skills" element={<TechnicalSkills />} />
-          <Route path="/industrial-skills" element={<IndustrialSkills />} />
-          <Route path="/career" element={<Career />} />
-        </Routes>
+        <main className="container" style={{ paddingTop: "1rem", paddingBottom: "2rem" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/technical-skills" element={<TechnicalSkills />} />
+            <Route path="/industrial-skills" element={<IndustrialSkills />} />
+            <Route path="/career" element={<Career />} />
+          </Routes>
+        </main>
 
         <Footer />
       </BrowserRouter>

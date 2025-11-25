@@ -5,23 +5,23 @@ const projects_monash = [
     tech: ["R", "RStudio", "Tidyverse", "Data Wrangling", "Workflow"],
     techIcons: ["r.png", "rstudio.png", "tidyverse.png", "wrangle.png", "workflow.png"],
     description: "Data wrangling, cleaning, workflow pipelines.",
-    link: "#"
+    link: "https://www.credly.com/badges/f7f2c647-ebb5-4efa-a7d2-08a0989b94da"
   },
   {
     id: "mon-2",
     title: "Modelling and Visualisation",
-    tech: ["R", "ggplot2", "Modelling", "Visualisation"],
-    techIcons: ["r.png", "ggplot2.png", "model.png", "viz.png"],
+    tech: ["R", "RStudio", "Tidyverse", "ggplot2", "Modelling", "Visualisation"],
+    techIcons: ["r.png", "rstudio.png", "tidyverse.png", "ggplot2.png", "model.png", "viz.png"],
     description: "Statistical modelling and advanced data visualisation.",
-    link: "#"
+    link: "https://www.credly.com/badges/f7f2c647-ebb5-4efa-a7d2-08a0989b94da"
   },
   {
     id: "mon-3",
     title: "Formats, Ethics, and Storytelling",
-    tech: ["R", "Data Ethics", "Storytelling", "Flexdashboard"],
-    techIcons: ["r.png", "ethics.png", "story.png", "dashboard.png"],
+    tech: ["R", "RStudio", "Flexdashboard", "Data Ethics", "Storytelling"],
+    techIcons: ["r.png", "rstudio.png", "dashboard.png", "ethics.png", "story.png"],
     description: "Ethics, privacy, storytelling, and interactive dashboards.",
-    link: "#"
+    link: "https://www.credly.com/badges/f7f2c647-ebb5-4efa-a7d2-08a0989b94da"
   }
 ];
 

@@ -69,7 +69,7 @@ const projects_bcs = [
     tech: ["React", "Tailwind CSS", "Vite", "React Router", "Django", "Responsive UI"],
     techIcons: ["react.png", "tailwind.png", "vite.png", "router.png", "responsive.png"],
     description: "Fully responsive portfolio built in React; displays 8 projects with interactive components.",
-    link: "#" // will be updated when deployed
+    link: "https://github.com/TNguyenLP1/9.React-Portfolio-BCS-Lv4-Bootcamp.git"
   },
   {
     id: 9,

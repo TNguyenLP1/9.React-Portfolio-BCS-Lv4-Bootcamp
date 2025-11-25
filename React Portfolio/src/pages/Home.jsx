@@ -19,8 +19,6 @@ import cieh from "../assets/logos/CIEH.png";
 import profile from "../assets/logos/profile.jpg";
 
 export default function Home() {
-  {profile}; // fallback path
-
   return (
     <section className="home container grid-layout">
       {/* Left column: summary + education */}
@@ -125,7 +123,7 @@ export default function Home() {
 
       {/* Right column: profile + awards + skill scroll */}
       <div className="grid-right text-center">
-        <img src={profileSrc} alt="Profile" className="profile-pic-large rounded-circle mb-4" />
+        <img src={profile} alt="Profile" className="profile-pic-large rounded-circle mb-4" />
 
         <div className="awards d-flex justify-content-center gap-3">
           <div className="card award-card p-3">

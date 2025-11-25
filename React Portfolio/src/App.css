@@ -464,3 +464,47 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   margin: 0 auto;
   display: block;
 }
+
+.timeline2 {
+  position: relative;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+.timeline2::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;          /* adjust to align with icons */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--accent); /* or var(--bs-border-color) if defined */
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+.timeline2-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline2-icon {
+  width: 60px;              /* same circle size as career timeline */
+  height: 60px;
+  border-radius: 50%;       /* circular container */
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;         /* clip logo inside circle */
+  box-shadow: var(--shadow);
+}
+
+.timeline2-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(0.85); /* shrink logo inside circle */
+}

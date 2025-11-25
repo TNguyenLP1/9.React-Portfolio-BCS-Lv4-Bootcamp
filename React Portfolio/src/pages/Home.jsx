@@ -18,21 +18,39 @@ export default function Home() {
           full-stack data systems, and commercial analytics.
         </p>
 
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <img src={bcsLogo} alt="BCS" style={{ height: 28, marginRight: 8 }} />
-            BCS Level 4 — Full Stack Web Development
-          </li>
-          <li>
-            <img src={utLogo} alt="UT Austin" style={{ height: 28, marginRight: 8 }} />
-            UT Austin — Postgrad Programme in AI & ML (McCombs)
-          </li>
-          <li>
-            <img src={monashLogo} alt="Monash" style={{ height: 28, marginRight: 8 }} />
-            Monash University — Data Science: Data-Driven Decision Making
-          </li>
-        </ul>
+<h2>Education</h2>
+<div className="timeline2">
+  <div className="timeline2-item">
+    <div className="timeline2-icon">
+      <img src={bcsLogo} alt="BCS" />
+    </div>
+    <div className="timeline2-content">
+      <h5>BCS Level 4</h5>
+      <p>Full Stack Web Development</p>
+    </div>
+  </div>
+
+  <div className="timeline2-item">
+    <div className="timeline2-icon">
+      <img src={utLogo} alt="UT Austin" />
+    </div>
+    <div className="timeline2-content">
+      <h5>UT Austin</h5>
+      <p>Postgrad Programme in AI & ML (McCombs)</p>
+    </div>
+  </div>
+
+  <div className="timeline2-item">
+    <div className="timeline2-icon">
+      <img src={monashLogo} alt="Monash" />
+    </div>
+    <div className="timeline2-content">
+      <h5>Monash University</h5>
+      <p>Data Science: Data‑Driven Decision Making</p>
+    </div>
+  </div>
+</div>
+
 
         {/* Skills scroll underneath education */}
         <div className="skill-marquee">

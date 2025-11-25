@@ -320,3 +320,20 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .timeline-period { font-size: 0.9rem; }
 .timeline-role { margin: 4px 0; }
 .timeline-content { margin-left: 28px; }
+
+.timeline-dot {
+  width: 60px;          /* size of the circle */
+  height: 60px;
+  border-radius: 50%;   /* makes it circular */
+  background-color: #f0f0f0; /* optional background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;     /* ensures image stays inside circle */
+}
+
+.timeline-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* scales logo nicely */
+}

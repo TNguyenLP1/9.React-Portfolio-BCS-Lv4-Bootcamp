@@ -7,7 +7,13 @@ export default function Timeline({ items = [] }) {
         <div className="timeline-item" key={item.id} role="listitem">
           
           <div className="timeline-dot" aria-hidden>
-            {item.icon ? <item.icon /> : null}
+            {item.logo ? (
+              <img
+                src={item.logo}
+                alt={item.company}
+                className="timeline-logo"
+              />
+            ) : null}
           </div>
 
           <div className="timeline-content">

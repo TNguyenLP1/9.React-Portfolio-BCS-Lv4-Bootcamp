@@ -13,7 +13,7 @@ import harvard from "../assets/logos/harvard.png";
 import ncfe from "../assets/logos/ncfe.jpg";
 import hse from "../assets/logos/HSE.png";
 import nebosh from "../assets/logos/NEBOSH.png";
-import isep from "../assets/logos/isep.png";
+import isep from "../assets/logos/ISEP.png";
 import iosh from "../assets/logos/IOSH.png";
 import cieh from "../assets/logos/CIEH.png";
 

@@ -16,9 +16,10 @@ import nebosh from "../assets/logos/NEBOSH.png";
 import isep from "../assets/logos/ISEP.png";
 import iosh from "../assets/logos/IOSH.png";
 import cieh from "../assets/logos/CIEH.png";
+import profile from "../assets/logos/profile.jpg";
 
 export default function Home() {
-  const profileSrc = "../React Portfolio/src/assets/logos/profile.jpg"; // fallback path
+  const profileSrc = {profile}; // fallback path
 
   return (
     <section className="home container grid-layout">

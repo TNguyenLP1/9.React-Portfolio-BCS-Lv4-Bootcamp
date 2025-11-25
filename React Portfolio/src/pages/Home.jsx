@@ -19,7 +19,7 @@ import cieh from "../assets/logos/CIEH.png";
 import profile from "../assets/logos/profile.jpg";
 
 export default function Home() {
-  const profileSrc = {profile}; // fallback path
+  {profile}; // fallback path
 
   return (
     <section className="home container grid-layout">

@@ -18,7 +18,7 @@ import iosh from "../assets/logos/IOSH.png";
 import cieh from "../assets/logos/CIEH.png";
 
 export default function Home() {
-  const profileSrc = "/src/assets/logos/profile.jpg"; // fallback path
+  const profileSrc = "../React Portfolio/src/assets/logos/profile.jpg"; // fallback path
 
   return (
     <section className="home container grid-layout">

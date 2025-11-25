@@ -59,7 +59,7 @@ const industrialSkills = [
       { name: "Report / Grant Writing & Scientific Communication", summary: "Documentation persuasive communication", icon: FaClipboardList },
       { name: "Client liaison & commercial reporting", summary: "Customer relationship management", icon: FaUsers },
       { name: "Coaching, Training & Capability Building", summary: "Mentorship skill development", icon: FaUsers },
-      { name: "Principles of Business Administration", summary: "Office operations management", icon: FaCogs },
+      { name: "Business Administration", summary: "Office operations management", icon: FaCogs },
       { name: "Business Analytics", summary: "Insights predictive modelling", icon: FaChartLine },
       { name: "Economics for Managers", summary: "Market demand strategy", icon: FaProjectDiagram },
       { name: "Financial Accounting", summary: "Statements performance evaluation", icon: FaDatabase }

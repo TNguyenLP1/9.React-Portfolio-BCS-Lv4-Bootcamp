@@ -10,7 +10,7 @@ import IndustrialSkills from "./pages/IndustrialSkills.jsx";
 import Career from "./pages/Career.jsx";
 
 import "./App.css";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function App() {
   const [theme, setTheme] = useState("light");
 

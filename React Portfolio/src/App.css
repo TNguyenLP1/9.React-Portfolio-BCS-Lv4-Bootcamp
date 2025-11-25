@@ -85,16 +85,28 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   cursor: pointer;
   transition: all var(--transition);
   color: var(--text);
-  font-size: 1.5em;
-  font-weight: 600;
+  min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .theme-toggle:hover { transform: translateY(-1px); }
 .theme-toggle:hover { color: var(--accent); }
+
+.theme-toggle i {
+  margin-right: 6px; /* adjust to taste */
+}
+
 
 @media (max-width: 720px) {
   .nav { gap: 0.5rem; }
   .header { padding: 0 0.75rem; }
 }
+
+.theme-label {
+  display: inline-block;
+}
+
 
 /* ============================= */
 /* CONTAINER / LAYOUT */
@@ -336,4 +348,119 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   width: 100%;
   height: 100%;
   object-fit: contain;  /* scales logo nicely */
+}
+/* Grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left wider, right narrower */
+  gap: 2rem;
+}
+.grid-left {
+  grid-column: 1;
+}
+.grid-right {
+  grid-column: 2;
+}
+
+/* Skills continuous scroll with fade */
+.skill-marquee {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  margin-top: 1.5rem;
+}
+.skill-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: skill-scroll 30s linear infinite;
+}
+.skill-item {
+  display: inline-block;
+  margin: 0 2rem;
+  font-weight: 500;
+  position: relative;
+}
+.skill-item img {
+  display: block;
+  margin: 4px auto 0;
+  height: 24px;
+}
+.skill-marquee::before,
+.skill-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+}
+.skill-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0));
+}
+.skill-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,0));
+}
+@keyframes skill-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Larger profile picture */
+.profile-pic-large {
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.awards {
+  display: flex;              /* force horizontal layout */
+  justify-content: center;    /* center them under profile pic */
+  gap: 1rem;                  /* spacing between cards */
+  flex-wrap: nowrap;          /* keep them in one line */
+}
+/* Make the right column a vertical stack sharing the same horizontal center */
+.grid-right,
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* <-- both profile pic and awards share the same center line */
+}
+
+/* Keep the profile pic exactly as-is, just center it to the same axis */
+.profile-pic,
+.profile-pic-large {
+  display: block;
+  margin: 0 auto;        /* centers the image on the parent center axis */
+}
+
+.awards,
+.awards-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;   /* <-- adds space between profile pic and awards */
+}
+
+
+.award-card {
+  flex: 0 0 140px;       /* fixed width for all cards */
+  min-height: 180px;     /* ensure equal height */
+  text-align: center;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* balance icon + text */
+}
+
+.award-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }

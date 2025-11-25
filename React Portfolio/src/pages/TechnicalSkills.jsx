@@ -6,8 +6,8 @@ import utProjects from "../data/projects_ut";
 import monashProjects from "../data/projects_monash";
 
 import bcsLogo from "../assets/logos/bcs.png";
-import utLogo from "../assets/logos/uta.png";
-import monashLogo from "../assets/logos/monash.png";
+import utLogo from "../assets/logos/ut1.png";
+import monashLogo from "../assets/logos/monash.jpg";
 
 export default function TechnicalSkills() {
   return (
@@ -31,7 +31,7 @@ export default function TechnicalSkills() {
       <section>
         <div className="skill-header">
           <img src={monashLogo} alt="Monash Logo" className="provider-logo" />
-          <h2 className="provider-title">Monash University — Data Science</h2>
+          <h2 className="provider-title">Monash University — Data Science Projects</h2>
         </div>
         <ProjectGallery items={monashProjects} />
       </section>

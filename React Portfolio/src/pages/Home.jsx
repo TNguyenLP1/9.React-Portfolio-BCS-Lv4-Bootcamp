@@ -11,11 +11,11 @@ import oxford from "../assets/logos/oxford.jpg";
 import hms from "../assets/logos/hms.png";
 import harvard from "../assets/logos/harvard.png";
 import ncfe from "../assets/logos/ncfe.jpg";
-import hse from "../assets/logos/hse.png";
-import nebosh from "../assets/logos/nebosh.png";
+import hse from "../assets/logos/HSE.png";
+import nebosh from "../assets/logos/NEBOSH.png";
 import isep from "../assets/logos/isep.png";
-import iosh from "../assets/logos/iosh.png";
-import cieh from "../assets/logos/cieh.png";
+import iosh from "../assets/logos/IOSH.png";
+import cieh from "../assets/logos/CIEH.png";
 
 export default function Home() {
   const profileSrc = "/src/assets/logos/profile.jpg"; // fallback path
